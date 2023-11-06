@@ -1,5 +1,6 @@
 homepage: "https://lawwwing.com"
 documentation: "https://lawwwing.com"
 versions:
-  - sha: ""
+  # Latest version
+  - sha: 92260c5d5392c8084d971e900ad335f343c4835f
     changeNotes: Initial Release
