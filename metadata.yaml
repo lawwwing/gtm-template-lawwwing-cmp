@@ -1,6 +1,9 @@
 homepage: "https://lawwwing.com"
-documentation: "https://lawwwing.com"
+documentation: "https://lawwwing.com/docs/"
 versions:
   # Latest version
+  - sha: 6707d732eebd1f0e31b0c527c26877ae6df4cc81
+    changeNotes: Added support for Google Consent Mode v2
+  # Old versions
   - sha: 92260c5d5392c8084d971e900ad335f343c4835f
     changeNotes: Initial Release
