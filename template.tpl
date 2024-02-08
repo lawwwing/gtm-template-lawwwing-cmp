@@ -14,10 +14,6 @@ ___INFO___
   "version": 1,
   "securityGroups": [],
   "displayName": "Lawwwing CMP",
-  "categories": [
-    "TAG_MANAGEMENT",
-    "PERSONALIZATION"
-  ],
   "brand": {
     "id": "brand_dummy",
     "displayName": "",
@@ -37,115 +33,158 @@ ___TEMPLATE_PARAMETERS___
     "type": "GROUP",
     "name": "defaultSettings",
     "displayName": "Set Google Consent Mode default status",
-    "groupStyle": "ZIPPY_CLOSED",
-    "subParams": [
-      {
-        "type": "PARAM_TABLE",
-        "name": "defaultsOverrides",
-        "displayName": "",
-        "paramTableColumns": [
-          {
-            "param": {
-              "type": "SELECT",
-              "name": "analytics",
-              "displayName": "Analytics Storage",
-              "macrosInSelect": false,
-              "selectItems": [
-                {
-                  "value": "granted",
-                  "displayValue": "granted"
-                },
-                {
-                  "value": "denied",
-                  "displayValue": "denied"
-                }
-              ],
-              "simpleValueType": true,
-              "help": "Allow analytics cookies before user gives consent",
-              "defaultValue": "denied"
-            },
-            "isUnique": false
-          },
-          {
-            "param": {
-              "type": "SELECT",
-              "name": "advertisement",
-              "displayName": "Advertisement Storage",
-              "macrosInSelect": false,
-              "selectItems": [
-                {
-                  "value": "granted",
-                  "displayValue": "granted"
-                },
-                {
-                  "value": "denied",
-                  "displayValue": "denied"
-                }
-              ],
-              "simpleValueType": true,
-              "help": "Allow advertising cookies before user gives consent",
-              "defaultValue": "denied"
-            },
-            "isUnique": false
-          },
-          {
-            "param": {
-              "type": "SELECT",
-              "name": "functionality",
-              "displayName": "Functionality Storage",
-              "macrosInSelect": false,
-              "selectItems": [
-                {
-                  "value": "granted",
-                  "displayValue": "granted"
-                },
-                {
-                  "value": "denied",
-                  "displayValue": "denied"
-                }
-              ],
-              "simpleValueType": true,
-              "help": "Allow functionality cookies before user gives consent",
-              "defaultValue": "denied"
-            },
-            "isUnique": false
-          },
-          {
-            "param": {
-              "type": "SELECT",
-              "name": "personalization",
-              "displayName": "Personalization Storage",
-              "macrosInSelect": false,
-              "selectItems": [
-                {
-                  "value": "granted",
-                  "displayValue": "granted"
-                },
-                {
-                  "value": "denied",
-                  "displayValue": "denied"
-                }
-              ],
-              "simpleValueType": true,
-              "help": "Allow personalized recommendation cookies before user gives consent",
-              "defaultValue": "denied"
-            },
-            "isUnique": false
-          },
-          {
-            "param": {
-              "type": "TEXT",
-              "name": "region",
-              "displayName": "Region (leave field blank to apply to all regions)",
-              "simpleValueType": true,
-              "help": "Specify a comma-separated list of \u003ca href\u003d\"https://en.wikipedia.org/wiki/ISO_3166-2\"\u003eregions\u003c/a\u003e for which you want to apply this setting."
-            },
-            "isUnique": false
-          }
-        ]
-      }
-    ],
+    "groupStyle": "NO_ZIPPY",
+    "subParams": [],
     "help": "These fields are denied by default for all regions unless overwritten with a blank region field"
+  },
+  {
+    "type": "PARAM_TABLE",
+    "name": "defaultsOverrides",
+    "displayName": "",
+    "paramTableColumns": [
+      {
+        "param": {
+          "type": "SELECT",
+          "name": "analytics",
+          "displayName": "Analytics Storage",
+          "macrosInSelect": false,
+          "selectItems": [
+            {
+              "value": "granted",
+              "displayValue": "granted"
+            },
+            {
+              "value": "denied",
+              "displayValue": "denied"
+            }
+          ],
+          "simpleValueType": true,
+          "help": "Allow analytics cookies before user gives consent",
+          "defaultValue": "denied"
+        },
+        "isUnique": false
+      },
+      {
+        "param": {
+          "type": "SELECT",
+          "name": "advertisement",
+          "displayName": "Advertisement Storage",
+          "macrosInSelect": false,
+          "selectItems": [
+            {
+              "value": "granted",
+              "displayValue": "granted"
+            },
+            {
+              "value": "denied",
+              "displayValue": "denied"
+            }
+          ],
+          "simpleValueType": true,
+          "help": "Allow advertising cookies before user gives consent",
+          "defaultValue": "denied"
+        },
+        "isUnique": false
+      },
+      {
+        "param": {
+          "type": "SELECT",
+          "name": "functionality",
+          "displayName": "Functionality Storage",
+          "macrosInSelect": false,
+          "selectItems": [
+            {
+              "value": "granted",
+              "displayValue": "granted"
+            },
+            {
+              "value": "denied",
+              "displayValue": "denied"
+            }
+          ],
+          "simpleValueType": true,
+          "help": "Allow functionality cookies before user gives consent",
+          "defaultValue": "denied"
+        },
+        "isUnique": false
+      },
+      {
+        "param": {
+          "type": "SELECT",
+          "name": "personalization",
+          "displayName": "Personalization Storage",
+          "macrosInSelect": false,
+          "selectItems": [
+            {
+              "value": "granted",
+              "displayValue": "granted"
+            },
+            {
+              "value": "denied",
+              "displayValue": "denied"
+            }
+          ],
+          "simpleValueType": true,
+          "help": "Allow personalized recommendation cookies before user gives consent",
+          "defaultValue": "denied"
+        },
+        "isUnique": false
+      },
+      {
+        "param": {
+          "type": "SELECT",
+          "name": "ad_user_data",
+          "displayName": "Ads User Data",
+          "macrosInSelect": false,
+          "selectItems": [
+            {
+              "value": "granted",
+              "displayValue": "granted"
+            },
+            {
+              "value": "",
+              "displayValue": "denied"
+            }
+          ],
+          "simpleValueType": true,
+          "help": "Sets consent for sending user data related to advertising to Google.",
+          "defaultValue": "denied"
+        },
+        "isUnique": false
+      },
+      {
+        "param": {
+          "type": "SELECT",
+          "name": "ad_personalization",
+          "displayName": "Ads Personalization",
+          "macrosInSelect": false,
+          "selectItems": [
+            {
+              "value": "granted",
+              "displayValue": "granted"
+            },
+            {
+              "value": "denied",
+              "displayValue": "denied"
+            }
+          ],
+          "simpleValueType": true,
+          "help": "Sets consent for personalized advertising.",
+          "defaultValue": "denied"
+        },
+        "isUnique": false
+      },
+      {
+        "param": {
+          "type": "TEXT",
+          "name": "Region",
+          "displayName": "Region (leave field blank to apply to all regions)",
+          "simpleValueType": true,
+          "help": "Specify a comma-separated list of \u003ca href\u003d\"https://en.wikipedia.org/wiki/ISO_3166-2\"\u003eregions\u003c/a\u003e for which you want to apply this setting."
+        },
+        "isUnique": false
+      }
+    ]
   },
   {
     "type": "GROUP",
@@ -197,7 +236,7 @@ ___TEMPLATE_PARAMETERS___
       {
         "type": "CHECKBOX",
         "name": "embedLawwwing",
-        "checkboxText": "Embed Lawwwing widget",
+        "checkboxText": "Embed Lawwwing SDK",
         "simpleValueType": true,
         "help": "Automatically embed the Lawwwing SDK from GTM. Make sure to disable this option if you embed the Lawwwing SDK directly on your website. We recommend embedding the Lawwwing SDK directly in the source code for your website as it is more performant than via GTM.",
         "defaultValue": false,
@@ -250,6 +289,8 @@ const updateConsentState = require('updateConsentState');
 
 const GCM_PURPOSES = {
   ad_storage: 'advertisement',
+  ad_user_data: 'ad_user_data',
+  ad_personalization: 'ad_personalization',
   analytics_storage: 'analytics',
   functionality_storage: 'functionality',
   personalization_storage: 'personalization',
@@ -271,6 +312,8 @@ const _split_string = (string) => {
 const setDefaultSettings = (data) => {
   setDefaultConsentState({
     'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
     'analytics_storage': 'denied',
     'functionality_storage': 'denied',
     'personalization_storage': 'denied',
@@ -282,6 +325,8 @@ const setDefaultSettings = (data) => {
     data.defaultsOverrides.forEach(row => {
       const overrides = {
         'ad_storage': row[GCM_PURPOSES.ad_storage],
+        'ad_user_data': row[GCM_PURPOSES.ad_user_data],
+        'ad_personalization': row[GCM_PURPOSES.ad_personalization],
         'analytics_storage': row[GCM_PURPOSES.analytics_storage],
         'functionality_storage': row[GCM_PURPOSES.functionality_storage],
         'personalization_storage': row[GCM_PURPOSES.personalization_storage],
@@ -652,6 +697,68 @@ ___WEB_PERMISSIONS___
                     "boolean": true
                   }
                 ]
+              },
+              {
+                "type": 3,
+                "mapKey": [
+                  {
+                    "type": 1,
+                    "string": "consentType"
+                  },
+                  {
+                    "type": 1,
+                    "string": "read"
+                  },
+                  {
+                    "type": 1,
+                    "string": "write"
+                  }
+                ],
+                "mapValue": [
+                  {
+                    "type": 1,
+                    "string": "ad_user_data"
+                  },
+                  {
+                    "type": 8,
+                    "boolean": true
+                  },
+                  {
+                    "type": 8,
+                    "boolean": true
+                  }
+                ]
+              },
+              {
+                "type": 3,
+                "mapKey": [
+                  {
+                    "type": 1,
+                    "string": "consentType"
+                  },
+                  {
+                    "type": 1,
+                    "string": "read"
+                  },
+                  {
+                    "type": 1,
+                    "string": "write"
+                  }
+                ],
+                "mapValue": [
+                  {
+                    "type": 1,
+                    "string": "ad_personalization"
+                  },
+                  {
+                    "type": 8,
+                    "boolean": true
+                  },
+                  {
+                    "type": 8,
+                    "boolean": true
+                  }
+                ]
               }
             ]
           }
@@ -723,6 +830,8 @@ scenarios:
 
     assertApi('setDefaultConsentState').wasCalledWith({
       'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
       'analytics_storage': 'denied',
       'functionality_storage': 'denied',
       'personalization_storage': 'denied',
@@ -740,6 +849,8 @@ scenarios:
         "advertisement":"denied",
         "functionality":"granted",
         "personalization":"denied",
+        "ad_user_data": "granted",
+        "ad_personalization": "granted",
         "region":"",
       }
     ];
@@ -749,6 +860,8 @@ scenarios:
 
     assertApi('setDefaultConsentState').wasCalledWith({
       'ad_storage': 'denied',
+      'ad_user_data': 'granted',
+      'ad_personalization': 'granted',
       'analytics_storage': 'granted',
       'functionality_storage': 'granted',
       'personalization_storage': 'denied',
@@ -766,6 +879,8 @@ scenarios:
         "advertisement":"denied",
         "functionality":"granted",
         "personalization":"denied",
+        "ad_user_data": "denied",
+        "ad_personalization": "denied",
         "region":"ES, US-CO",
       }
     ];
@@ -775,6 +890,8 @@ scenarios:
 
     assertApi('setDefaultConsentState').wasCalledWith({
       'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
       'analytics_storage': 'granted',
       'functionality_storage': 'granted',
       'personalization_storage': 'denied',
@@ -797,6 +914,6 @@ setup: |-
 
 ___NOTES___
 
-Created on 11/6/2023, 7:49:45 PM
+Created on 2/8/2024, 7:50:26 PM
 
 
